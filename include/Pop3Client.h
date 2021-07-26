@@ -22,10 +22,11 @@ class Pop3Client;
             bool connected;
         public:
             Pop3Client();
-            void connect(const string &hostname, const string &port, CmdLineInterface *callback);
+            void connect(const string &hostname, const string &port);
             void echo(const string &msg);
-            void login(const string &username, const string &password, CmdLineInterface *callback);
-            void close(CmdLineInterface *callback);
+            void login(const string &username, const string &password);
+            void close();
+            Response receiver();
             bool is_connected();
             bool is_login();
     };
