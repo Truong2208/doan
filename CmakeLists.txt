@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.10)
+
+project (pop3client)
+
+
+
+
+include_directories(include)
+
+file(GLOB SOURCES "src/*.cpp")
+
+add_executable(pop3client ${SOURCES})
+
+target_link_libraries(pop3client wsock32 ws2_32)
